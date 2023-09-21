@@ -1,6 +1,7 @@
 // Assignment code here
 
-
+// Change status of button so that is in enabled and user can interact with it.
+document.getElementById("generate").disabled = false;
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
