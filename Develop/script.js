@@ -3,10 +3,11 @@ var lowercase;
 var uppercase;
 var numberChar;
 var specialChar;
+var password=""
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
-
+console.log(generateBtn);
 //Add event listener to trigger prompt and alert messages
 generateBtn.addEventListener("click", function passwordParameters() {
   //Prompt to determine password length
@@ -63,7 +64,7 @@ generateBtn.addEventListener("click", function passwordParameters() {
       var characterSet = lowercase + uppercase + numberChar + specialChar;
       console.log(characterSet);
       var characterQuantityNumber = characterQuantityString * 1
-      var password = "";
+      password = "";
       console.log(characterQuantityNumber)
       //Selects random characters from characterSet until password reaches length selected by user
       while (password.length < characterQuantityNumber) {
@@ -73,6 +74,13 @@ generateBtn.addEventListener("click", function passwordParameters() {
       //Password value assigned to HTML element
       var passwordText = document.querySelector("#password");
       passwordText.value = password;
+      var buttonText = document.getElementById("generate").innerHTML;
+      console.log(buttonText);
+      console.log(password);
+      //If a password has already been generated, change button text to "Generate New Password"
+      if (password!="") {
+        document.getElementById("generate").innerHTML = "Generate New Password";
+      }
     }
   //Alert if password length is not within the accepted parameters
   } else {
