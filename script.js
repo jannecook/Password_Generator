@@ -18,10 +18,10 @@ generateBtn.addEventListener("click", function passwordParameters() {
   }
   //If a valid character number from 8 to 128 is selected, alerts will appear
   else if (characterQuantityString * 1 >= 8 && characterQuantityString * 1 <= 128) {
-    var lowercaseConfirm = window.confirm("Select 'Okay' if you would like to include lowercase letters in your password. Select 'Cancel' if you do not wish to include lowercase letters. Note: The more character types included, the more secure your password will be.");
-    var uppercaseConfirm = window.confirm("Select 'Okay' if you would like to include uppercase letters in your password. Select 'Cancel' if you do not wish to include uppercase letters. Note: The more character types included, the more secure your password will be.");
-    var numberConfirm = window.confirm("Select 'Okay' if you would like to include numbers in your password. Select 'Cancel' if you do not wish to include numbers. Note: The more character types included, the more secure your password will be.");
-    var specialCharConfirm = window.confirm("Select 'Okay' if you would like to include special characters (e.g. #, $, &) in your password. Select 'Cancel' if you do not wish to include special characters. Note: The more character types included, the more secure your password will be.");
+    var lowercaseConfirm = window.confirm("Select 'Okay' to include lowercase letters in your password. Select 'Cancel' to exclude lowercase letters. Note: The more character types included, the more secure your password will be.");
+    var uppercaseConfirm = window.confirm("Select 'Okay' to include uppercase letters in your password. Select 'Cancel' to exclude uppercase letters.");
+    var numberConfirm = window.confirm("Select 'Okay' to include numbers in your password. Select 'Cancel' to exclude numbers.");
+    var specialCharConfirm = window.confirm("Select 'Okay' to include special characters (e.g. #, $, &) in your password. Select 'Cancel' to exclude special characters.");
     //Take Boolean values and convert to 1 or 0
     var lower = lowercaseConfirm ? 1 : 0;
     var upper = uppercaseConfirm ? 1 : 0;
