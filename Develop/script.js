@@ -1,4 +1,10 @@
-// Assignment code here
+//Variables with potential password characters
+var lowercase = "abcdefghijklmnopqrstuvwxyz";
+var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var numbers = "0123456789";
+var specialChar = " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
+
+//Enable button
 document.getElementById("generate").disabled = false;
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
