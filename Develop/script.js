@@ -3,7 +3,7 @@ var lowercase;
 var uppercase;
 var numberChar;
 var specialChar;
-var password=""
+var password = ""
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -78,11 +78,11 @@ generateBtn.addEventListener("click", function passwordParameters() {
       console.log(buttonText);
       console.log(password);
       //If a password has already been generated, change button text to "Generate New Password"
-      if (password!="") {
+      if (password != "") {
         document.getElementById("generate").innerHTML = "Generate New Password";
       }
     }
-  //Alert if password length is not within the accepted parameters
+    //Alert if password length is not within the accepted parameters
   } else {
     alert("Please enter a number larger than 7 and smaller than 129.");
   }
