@@ -3,10 +3,7 @@ var lowercase;
 var uppercase;
 var numberChar;
 var specialChar;
-var lower;
-var upper;
-var number;
-var special;
+
 
 //Enable button
 document.getElementById("generate").disabled = false;
@@ -33,31 +30,45 @@ generateBtn.addEventListener("click", function passwordParameters() {
     }
     else {
       console.log(lowercaseConfirm, uppercaseConfirm, numberConfirm, specialCharConfirm)
+      console.log(lower, upper, number, special);
+      if (lower == 1) {
+        lowercase = "abcdefghijklmnopqrstuvwxyz";
+      } else {
+        lowercase= "";
+      }
+      console.log(upper);
+      if (upper == 1) {
+        uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      } else {
+        uppercase = "";
+      }
+      console.log(uppercase);
+      if (number == 1) {
+        numberChar = "0123456789";
+      } else {
+        numberChar = ""
+      }
+      console.log(numberChar);
+      if (special == 1) {
+        specialChar = " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
+      } else {
+        specialChar = ""
+      }
+      console.log(specialChar);
+      var characterSet = lowercase + uppercase + numberChar + specialChar;
+      console.log(characterSet);
+      var characterQuantityNumber = characterQuantityString * 1
+      var password = "";
+      console.log(characterQuantityNumber)
+      while (password.length < characterQuantityNumber) {
+        password += characterSet[Math.floor(Math.random() * characterSet.length)];
+      }
+      console.log(password)
     }
   } else {
     alert("Please select a number larger than 7 and smaller than 129.");
   }
 })
-//Add values to variable to hold potential password characters
-if (lower = 1) {
-  lowercase = "abcdefghijklmnopqrstuvwxyz";
-}
-console.log(lowercase);
-if (upper = 1) {
-  uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-}
-console.log(uppercase);
-if (number = 1) {
-  numberChar = "0123456789";
-}
-console.log(numberChar);
-if (special = 1) {
-  specialChar = " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
-}
-console.log(specialChar);
-
-var characterSet = lowercase+uppercase+numberChar+specialChar;
-console.log(characterSet);
 
 /*
 // Write password to the #password input
