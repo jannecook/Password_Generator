@@ -1,11 +1,11 @@
-//Variables with potential password characters
-var lowercase = "abcdefghijklmnopqrstuvwxyz";
-var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var numbers = "0123456789";
-var specialChar = " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
-var lower; 
-var upper; 
-var number; 
+//Variables relating to potential password characters
+var lowercase;
+var uppercase;
+var numberChar;
+var specialChar;
+var lower;
+var upper;
+var number;
 var special;
 
 //Enable button
@@ -38,7 +38,27 @@ generateBtn.addEventListener("click", function passwordParameters() {
     alert("Please select a number larger than 7 and smaller than 129.");
   }
 })
-var responses = "";
+//Add values to variable to hold potential password characters
+if (lower = 1) {
+  lowercase = "abcdefghijklmnopqrstuvwxyz";
+}
+console.log(lowercase);
+if (upper = 1) {
+  uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+}
+console.log(uppercase);
+if (number = 1) {
+  numberChar = "0123456789";
+}
+console.log(numberChar);
+if (special = 1) {
+  specialChar = " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
+}
+console.log(specialChar);
+
+var characterSet = lowercase+uppercase+numberChar+specialChar;
+console.log(characterSet);
+
 /*
 // Write password to the #password input
 function writePassword() {
